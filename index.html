@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--- ICS2O-My first PWA --->
+<!--- ICS2O-My first PWA -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,29 +9,61 @@
     <meta name="author" content="Marshall" />
     <meta name="theme-color" content="#FFFFFF" />
     <title>GitHub page as PWA template</title>
-    <link rel="canonical" href="https://marshall-demars.github.io/ICS2O-PWA-Test/" />
-    <link rel="manifest" href="/ICS2O-PWA-Test/manifest.webmanifest" />
+    <link rel="canonical" href="https://marshall-demars.github.io/ICS20-Unit5-03-JS/" />
+    <link rel="manifest" href="/ICS20-Unit5-03-JS/manifest.webmanifest" />
     <link rel="stylesheet" href="./css/style.css" />
-    <!--- None blocking for Lighthouse report --->
-    <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously --->
+    <!--- None blocking for Lighthouse report -->
+    <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></noscript>
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-teal.min.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-teal.min.css"></noscript>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   </head>
-  <title>My first PWA</title>
+  <title>Unit 5-03</title>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
     <div class = "mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class = "mdl-layout__header">
         <div class = "mdl-layout__header-row">      
-          <span class = "mdl-layout-title">XXX</span>
+          <span class = "mdl-layout-title">What movie should you watch based on age</span>
         </div>       
       </header>
       <main class = "mdl-layout__content">
+        <img src="./image/1502140004.svg" alt="pizza" width="20%" height="auto" />
+        <!-- basic text -->
+        <h4>Can't decide on a move? Click below!</h4> 
+        <br>
+        <form>
+          <h5>Click the button that applies to your age:</h5>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect2" for="one">
+            <input type="radio" id="adult-age" class="mdl-radio__button" name="options" value="1">
+            <span class="mdl-radio__label">17+ years old</span>
+          </label>
+          <br>            
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="two">
+            <input type="radio" id="teen-age" class="mdl-radio__button" name="options" value="1">
+            <span class="mdl-radio__label">13-16 years old</span>
+          </label>
+          <br>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="three">
+            <input type="radio" id="kid-age" class="mdl-radio__button" name="options" value="1">
+            <span class="mdl-radio__label">5-12 years old</span>
+          </label>
+          <br>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="four">
+            <input type="radio" id="baby-age" class="mdl-radio__button" name="options" value="1">
+            <span class="mdl-radio__label">5 years old or younger</span>
+          </label>
+        </form>
+        <!-- Colored raised button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="myButtonClicked()">
+          Click
+        </button>
+        <div id="watch"></div>
       </main>
     </div>
   </body>
 </html>
+
