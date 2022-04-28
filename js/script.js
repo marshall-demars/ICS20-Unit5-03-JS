@@ -25,11 +25,14 @@ function myButtonClicked() {
   
   // process and output
   if (adults == true) {
-    console.log("You can watch an R rated movie alone!")
+    document.getElementById("watch").innerHTML = "You can watch a R rated movie alone!"
   } else if (teenagers == true) {
-    console.log("You can watch a PG 13 movie alone!")
+    document.getElementById("watch").innerHTML = "You can watch a PG-13 rated movie alone!"
   } else if (kids == true) {
-    console.log("You can watch a PG or G movie!")
-  } else (babies == true) {
-    console.log("You are too young to watch most movies!")
+    document.getElementById("watch").innerHTML = "You can watch a G or PG rated movie!"
+  } else if (babies == true) {
+    document.getElementById("watch").innerHTML = "You can't watch too many movies!"
+  } else {
+    // pass
   }
+}
